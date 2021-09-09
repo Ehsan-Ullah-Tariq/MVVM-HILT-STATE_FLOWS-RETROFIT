@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.graphics.Color" />
+
+        <import type="android.view.View" />
+
+        <import type="com.android.test.R" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/itemRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_2sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/cardViewBorder"
+        app:strokeWidth="0.5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/_10sdp">
+
+
+
+
+            <ImageView
+                android:id="@+id/itemImage"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_105sdp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:paddingStart="8dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="8dp"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/itemTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:ellipsize="end"
+                style="@style/mediumTextStyle"
+                android:gravity="start"
+                android:lineSpacingExtra="@dimen/_3sdp"
+                android:maxLines="2"
+                android:minLines="1"
+                android:textColor="@color/textColorGrey"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemImage"
+                tools:text="Apple iphone 7 32GB 4G LTE (T-mobile) Smart phone" />
+
+
+            <TextView
+                android:id="@+id/tvGrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/regularTextStyle"
+                android:gravity="start"
+                android:singleLine="true"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_8sdp"
+                tools:text="Tag"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemTitle"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -4,4 +4,3 @@
 -Followed SOLID principles
 -Used data binding
 -Used state flows
-"# Recruitment-test" 
